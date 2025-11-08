@@ -55,17 +55,17 @@ module mux8x1 (
     wire [1:0] w2;  // outputs of second stage
 
     // First stage (4 muxes)
-    mux2x1 m1 (d[0], d[1], sel[0], w1[0]);
-    mux2x1 m2 (d[2], d[3], sel[0], w1[1]);
-    mux2x1 m3 (d[4], d[5], sel[0], w1[2]);
-    mux2x1 m4 (d[6], d[7], sel[0], w1[3]);
+    mux2x1 m1 (d[0], d[1], sel[2], w1[0]);
+    mux2x1 m2 (d[2], d[3], sel[2], w1[1]);
+    mux2x1 m3 (d[4], d[5], sel[2], w1[2]);
+    mux2x1 m4 (d[6], d[7], sel[2], w1[3]);
 
     // Second stage (2 muxes)
     mux2x1 m5 (w1[0], w1[1], sel[1], w2[0]);
     mux2x1 m6 (w1[2], w1[3], sel[1], w2[1]);
 
     // Final stage (1 mux)
-    mux2x1 m7 (w2[0], w2[1], sel[2], y);
+    mux2x1 m7 (w2[0], w2[1], sel[0], y);
 endmodule
 ```
 
