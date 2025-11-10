@@ -1,11 +1,10 @@
 # 8x1-mux-using-2x1-mux-
 # EXPERIMENT 1: Design and Implementation of 8:1 Multiplexer using 2:1 Multiplexers
 ## AIM
-To design, implement, and verify an 8-to-1 multiplexer using 2-to-1 multiplexers in Verilog HDL and simulate it using Quartus II software.
+To design, implement, and verify an 8-to-1 multiplexer using 2-to-1 multiplexers in Verilog HDL and simulate it using Vivado.
 
 ## TOOLS / SOFTWARE REQUIRED
-Intel Quartus II Software (any version)
-ModelSim (for simulation)
+Vivado
 PC with Windows OS
 
 ## THEORY
@@ -25,12 +24,12 @@ Final stage: 1 MUX selects between 2 outputs → final output
 
 ## PROCEDURE
 
-1.Open Quartus II → Create a New Project.
+1.Open Vivado → Create a New Project.
 2.Create a new Verilog HDL file for the 8:1 MUX circuit.
 3.Write and save the code as mux8x1_using_2x1.v.
 4.Create another Verilog file for the testbench and save it as tb_mux8x1_using_2x1.v.
 5.Compile both files and check for errors.
-6.Run Simulation in ModelSim-Altera:
+6.Run Simulation 
 7.Add signals (d, sel, and y)
 8.Run simulation for sufficient time (e.g., 100 ns)
 9.Observe the waveform and verify that output matches the expected input for the given select lines.
